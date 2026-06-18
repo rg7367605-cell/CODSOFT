@@ -1,63 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Landing Page</title>
-<link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <nav>
-        <div class="logo">Rajan Gupta</div>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+<div class="calculator">
+    <input type="text" id="display" readonly>
 
-    <div class="hero">
-        <div class="hero-text">
-            <h1>Hello, I'm <span>Rajan Gupta</span></h1>
-            <h2>Web Developer & CSE Student</h2>
-            <p>
-                I create responsive websites and web applications
-                using HTML, CSS, JavaScript, Java and Python.
-            </p>
+    <div class="buttons">
+        <button onclick="clearDisplay()">C</button>
+        <button onclick="appendValue('/')">/</button>
+        <button onclick="appendValue('*')">*</button>
+        <button onclick="deleteLast()">DEL</button>
 
-            <a href="#" class="btn">View Projects</a>
-            <a href="#" class="btn btn2">Hire Me</a>
-        </div>
+        <button onclick="appendValue('7')">7</button>
+        <button onclick="appendValue('8')">8</button>
+        <button onclick="appendValue('9')">9</button>
+        <button onclick="appendValue('-')">-</button>
 
-        <div class="hero-image">
-            <img src="rajan Image.jpg" alt="Profile Photo">
-        </div>
+        <button onclick="appendValue('4')">4</button>
+        <button onclick="appendValue('5')">5</button>
+        <button onclick="appendValue('6')">6</button>
+        <button onclick="appendValue('+')">+</button>
+
+        <button onclick="appendValue('1')">1</button>
+        <button onclick="appendValue('2')">2</button>
+        <button onclick="appendValue('3')">3</button>
+        <button onclick="calculate()" rowspan="2">=</button>
+
+        <button onclick="appendValue('0')">0</button>
+        <button onclick="appendValue('.')">.</button>
     </div>
-</header>
+</div>
 
-<section class="features">
-    <div class="card">
-        <h3>Web Development</h3>
-        <p>Building responsive and modern websites.</p>
-    </div>
-
-    <div class="card">
-        <h3>Java Programming</h3>
-        <p>Developing desktop and backend applications.</p>
-    </div>
-
-    <div class="card">
-        <h3>Problem Solving</h3>
-        <p>Strong knowledge of Data Structures and Algorithms.</p>
-    </div>
-</section>
-
-<footer>
-    <p>© 2026 Rajan Gupta | All Rights Reserved</p>
-</footer>
-
+<script src="script.js"></script>
 </body>
 </html>
